@@ -463,7 +463,7 @@ function Home() {
      
       <footer className="main-footer text-bg-dark py-5 small  border-t border-white">
  <div className="container">
-     <div className="grid grid-cols-1 md:items-start md:grid-cols-4 md:gap-10 lg:gap-5">
+     <div className="grid grid-cols-1 md:items-start md:grid-cols-4 md:gap-10 lg:gap-5 space-y-3">
         <div className="">
         <h6 className='font-bold text-lg text-white text-start'>Address </h6>
            
@@ -511,7 +511,7 @@ function Home() {
            </div>
         <div className="">
          
-        <p className='flex justify-between flex-col  md:flex-row md:flex-wrap lg:flex-nowrap'>
+        <p className='flex justify-between flex-col space-y-3  md:flex-wrap lg:flex-nowrap'>
          <LinkRouter to="#" className="flex items-center px-2 justify-start md:justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-[120px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border ">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook  flex shrink-0 " viewBox="0 0 16 16">
                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>

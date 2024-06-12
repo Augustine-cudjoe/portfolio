@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{background: #1f242d; cursor: pointer;}
+
+.logo{background: -webkit-linear-gradient(white, 
+     #0ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
+
+ 
+  .active{font-weight: bolder; color: #0ef !important;}  
+@media (min-width:768px) {
+    .logo{
+        animation: slideLeft 3s forwards;
+    }
+
+    .menu-item{ animation: slideTop 5s ease forwards;}
+    .home-content h3{ animation: slidebottom 1s ease forwards; animation-delay: .7s;}
+    .home-content h1{ animation: slideright 1s ease forwards; animation-delay: 1s;}
+    .home-content p,.skills,.project{ animation: slideLeft 3s forwards; animation-delay: 1s;}
+    .social-media a{ animation: slideLeft 3s forwards; animation-delay: 1s;}
+    #bottom a{  animation: slideTop 5s ease forwards; animation-delay: 2s;}
+    .home-img img{ animation: zoomIn 5s ease forwards; 
+         animation:  floatImage 4s ease-in-out infinite;
+        animation-delay: 2s,3s;  }
+    .project-content:hover img{
+        transform: scale(1.1);
+    }
+    .project-content{width: 100% !important; }
+      
+    @keyframes slideLeft {
+        0%{
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+       100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+    }
+    @keyframes slideTop {
+        0%{
+            transform: translateY(100px);
+            opacity: 0;
+        }
+       100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+    }
+    @keyframes slidebottom {
+        0%{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+       100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+    }
+    @keyframes slideright {
+        0%{
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+       100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+    }
+    @keyframes zoomIn {
+        0%{
+            transform: scale(0);
+            opacity: 0;
+        }
+       100%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+    }
+    @keyframes floatImage {
+        0%{transform: translateY(0);}
+        50%{transform: translateY(-24px);}
+        100%{transform: translateY(0);}
+        
+    }   
+}

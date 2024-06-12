@@ -49,7 +49,7 @@ function Home() {
   
     
   return (
-    <div className='home min-h-screen'>
+    <div className='home min-h-screen overflow-hidden'>
       <nav className='flex md:items-center justify-between w-full h-screen md:h-[100px] gap-[30px] fixed z-[300] w-full top-0 left-0  md:bg-transparent md:px-20 md:py-10 '>
         <div className='hidden md:flex  justify-between w-full'>
         <div className='flex justify-between '>
@@ -142,10 +142,10 @@ function Home() {
          }
        </div>
       </nav>
-      <section className='home flex md:grid md:grid-cols-2 gap-[30px] lg:flex flex-col-reverse md:min-h-screen h-full lg:flex-row items-center justify-between gap-10 pt-20 md:pt-[10px] lg:pt-[70px] md:px-[5%] pb-0' id='/'>
+      <section className='home flex md:grid md:grid-cols-2 gap-[30px] lg:flex flex-col-reverse md:h-[500px] lg:h-[600px] h-full lg:flex-row items-start justify-between gap-10 pt-20 md:pt-[70px] lg:pt-[100px] md:px-[5%] pb-0' id='/'>
         <div className="home-content max-w-[600px] ">
             <h3 className=' text-[32px] font-bold  text-white text-start'> I'm </h3>
-            <h1 className=' text-white text-[30px] md:text-[40px] lg:text-[56px] font-bold ml-0 mr-0 my-[-3px] text-start'>Augustine Cudjoe</h1>
+            <h1 className=' text-white text-[30px] md:text-[30px] lg:text-[56px] font-bold ml-0 mr-0 my-[-3px] text-start'>Augustine Cudjoe</h1>
             <h3 className='text-[20px] lg:text-[32px] font-bold text-white mb-[20px] text-start' > And I'm a <span className='text-[#0ef] md:text-[20px] lg:text-[32px]' ref={el}> </span>  
              
            </h3>
@@ -229,10 +229,10 @@ function Home() {
     <h3 className="vertical-timeline-element-title text-xl font-extrabold md:text-3xl">Amazon, Poland</h3>
     <h4 className="vertical-timeline-element-subtitle my-3 text-lg md:text-2xl">Senior Compliance Associate</h4>
     <ul className='space-y-3'>
-        <li className='text-base text-start flex items-start gap-2'> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Responded to product compliance issues .</li>
-        <li className='text-base text-start flex items-start gap-2 '> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Classified products based on SOP.</li>
-        <li className='text-base text-start flex items-start gap-2 '>  <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/>Followed SOP and instructions provided by managers.</li>
-        <li className='text-base text-start flex items-start gap-2 '> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Demonstrated attention to detail.</li>
+        <li className='text-base text-start flex md:items-center items-start gap-2'> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Responded to product compliance issues .</li>
+        <li className='text-base text-start flex md:items-center items-start gap-2 '> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Classified products based on SOP.</li>
+        <li className='text-base text-start flex md:items-center items-start gap-2 '>  <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/>Followed SOP and instructions provided by managers.</li>
+        <li className='text-base text-start flex md:items-center items-start gap-2 '> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Demonstrated attention to detail.</li>
     </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -461,7 +461,7 @@ function Home() {
            </form>
       </section>
      
-      <footer className="main-footer text-bg-dark py-5 small border-t border-white">
+      <footer className="main-footer text-bg-dark py-5 small  border-t border-white">
  <div className="container">
      <div className="grid grid-cols-1 md:items-start md:grid-cols-4 md:gap-10 lg:gap-5">
         <div className="">

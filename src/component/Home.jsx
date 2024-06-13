@@ -13,14 +13,60 @@ import { IoCheckmarkCircleOutline,IoLogoGithub  } from "react-icons/io5";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { Link} from 'react-scroll';
-import { NavLink, Link as LinkRouter} from 'react-router-dom';
+import {  Link as LinkRouter} from 'react-router-dom';
 
 import { BiLogoTailwindCss ,BiLogoBootstrap} from "react-icons/bi";
+
 function Home() {
+  const projects=[
+    {
+    id:0,
+    item:'CTL Africa',
+    text:'Developed a responsive multiple-page website using HTML, CSS, Tailwind CSS, React-Router and React JS.',
+    img:'https://i.im.ge/2024/06/09/KCH8uq.Screenshot-2024-06-09-at-13-45-51.png',
+    link:'https://ctl-africa.vercel.app/'
+  },
+  {
+    id:1,
+    item:'E-learning',
+    text:'Developed a responsive and user-friendly e-learning website built with HTML, Bootstrap, CSS, and React JS.',
+    img:'https://i.im.ge/2024/06/09/KCpQxJ.Screenshot-2024-06-09-at-14-51-32.png',
+    link:'https://elearning-web-coral.vercel.app/'
+  },
+  {
+    id:2,
+    item:'Landing Page',
+    text:' Created a landing page built with HTML, Tailwind CSS, CSS, and React JS.',
+    img:'https://i.im.ge/2024/06/09/KCpO9K.Screenshot-2024-06-09-at-14-55-19.png',
+    link:'https://responsive-landing-page-six.vercel.app/'
+  },
+  {
+    id:3,
+    item:'CRUD APP',
+    text:'Implemented a React JS CRUD app for booking appointments. It allows users to book an appointment, edit, and delete using HTML, Bootstrap, React JS, JSON Server, and Axios.',
+    img:'https://i.im.ge/2024/06/09/KCnAj4.Screenshot-2024-06-09-at-16-21-13.png',
+    link:'https://react-ui-gi6a-jr6c7mnqu-augustine-cudjoes-projects.vercel.app/'
+  },
+  {
+    id:4,
+    item:'Dashboard',
+    text:'Built a responsive dashboard for the school management system using HTML, CSS,Tailwind CSS, and ReactJS.',
+    img:' https://i.im.ge/2024/06/09/KCJiI1.Screenshot-2024-06-09-at-15-47-58.png',
+    link:'https://hositadash-ffko-kf2crzlwr-augustine-cudjoes-projects.vercel.app/'
+  },
+  {
+    id:5,
+    item:'Blog',
+    text:' Implemented a responsive blog page allowing users to post, create, update, and delete a post. Built with HTML, Tailwind CSS, JSON-server, Api, Axios, and ReactJS. ',
+    img:'https://i.im.ge/2024/06/09/KC4c0F.Screenshot-2024-06-09-at-16-47-00.png',
+    link:'https://mern-stack-blog-blue.vercel.app/'
+  }
+]
     const [open,setOpen]=useState(false)
     const pathName=window.location.pathname;
     const pageName=pathName.split('/').pop();
     const el =useRef(null)
+    
     useEffect(()=>{
         document.title='home'
         const typed=new Typed(el.current,{
@@ -50,8 +96,8 @@ function Home() {
     
   return (
     <div className='home min-h-screen overflow-hidden'>
-      <nav className='flex md:items-center justify-between w-full h-screen md:h-[100px] gap-[30px] fixed z-[300] w-full top-0 left-0  md:bg-transparent md:px-20 md:py-10 '>
-        <div className='hidden md:flex  justify-between w-full'>
+      <nav className=' '>
+        <div className='hidden md:flex  justify-between  md:items-center  w-full h-screen md:h-[100px] gap-[30px] fixed md:z-[300] w-full top-0 left-0  md:bg-transparent md:px-20 md:py-10'>
         <div className='flex justify-between '>
           
           <Link  to='home' className=' text-base md:text-[25px]  md:text-white font-bold curser-pointer 
@@ -96,8 +142,8 @@ function Home() {
         </div>
         </div>
          {/*mobile menu*/}
-       <div className='w-full md:hidden mt-0 p-0'> 
-       <div className='flex items-center justify-between pt-2 bg-[#0ef] z-[150] w-full'>
+       <div className='w-full md:hidden mt-0 p-0 fixed z-40 top-0 left-0 '> 
+       <div className='flex items-center justify-between pt-0 bg-[#0ef]  w-full  '>
        < Link to='/' 
             className="  text-base text-black font-semibold ml-[35px] p-2   ">Portfolio </ Link>
             
@@ -150,7 +196,7 @@ function Home() {
              
            </h3>
             <p className=' text-white text-[16px] text-start'>Focused on creating beautiful and user friendly web applications</p>
-          <div className="social-media flex items-center md:justify-start justify-center  ">
+          <div className="social-media flex items-center md:justify-start justify-center relative md:static z-[150] md:z-0  ">
              <LinkRouter className='inline-flex items-center justify-center my-[30px] mr-[15px] ml-[0px] w-[40px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white' to='#'> <FaFacebookF /> </LinkRouter>
              <LinkRouter className='inline-flex items-center justify-center my-[30px] mr-[15px] ml-[0px] w-[40px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'    to='https://github.com/Augustine-cudjoe'> <IoLogoGithub  /></LinkRouter>
              <LinkRouter  className='inline-flex items-center justify-center my-[30px] mr-[15px] ml-[0px] w-[40px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white' to='https://www.linkedin.com/in/augustine-cudjoe/'> <FaLinkedinIn/> </LinkRouter>
@@ -167,7 +213,7 @@ function Home() {
         </div>
 
       </section> 
-      <section className='education py-[50px] w-full h-sreen px-[5%] ' id='education'>
+      <section className='education py-[50px] w-full h-sreen px-[5%] z-0 ' id='education'>
              <h2 className='text-[24px] font-extrabold text-white py-[30px]'> Education</h2>
              <div className=' flex flex-col items-center justify-center '>
 
@@ -214,7 +260,7 @@ function Home() {
     </VerticalTimeline>
              </div>
       </section>
-      <section className='work py-[50px] w-full h-sreen px-[5%]  ' id='work'>
+      <section className='work py-[50px] w-full h-sreen px-[5%] relative z-0 ' id='work'>
              <h2  className='text-[24px] font-extrabold text-white py-[30px]'>Work Experience</h2>
              <VerticalTimeline layout='2-columns'>
            <VerticalTimelineElement
@@ -320,15 +366,7 @@ function Home() {
                       
                     </div>
                 </div>
-                <div className="skills-content w-full md:mb-3 mb-7">
-                <div className="border border-[#0ef] hover:border-white  hover:bg-[#0ef] w-[100px] mx-auto rounded-full mb-5">
-                        <CgDebug  className='mx-auto  text-[#0ef] hover:text-white  ' size={100}/>
-                    </div>
-                    <div className='flex flex-col space-y-3'>
-                        <h4 className='text-white font-semibold text-2xl'>Debugging</h4>
-                      
-                    </div>
-                </div>
+                
                 <div className="skills-content w-full md:mb-3 mb-7">
                 <div className="border border-[#0ef] hover:border-white  hover:bg-[#0ef] w-[100px] mx-auto rounded-full mb-5">
                         <FaSass  className='mx-auto  text-[#0ef] hover:text-white p-2 ' size={100}/>
@@ -340,101 +378,29 @@ function Home() {
                 </div>
             </div>
       </section>
-       <section className='project  py-[50px] w-full h-sreen px-[5%]' id='project'>
+       <section className='project  py-[50px] w-full md:h-sreen px-[5%] relative z-0 ' id='project'>
                 <h2 className='mb-[4rem] text-[24px] text-white font-bold'> Latest <span>Projects</span></h2>
                 <div className="project-holder  grid grid-cols-1 md:grid-cols-3 items-center gap-5">
-                <LinkRouter to='https://ctl-africa.vercel.app/'>
-                <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full  h-[180px] md:h-[150px] lg:h-[200px] ' src='https://i.im.ge/2024/06/09/KCH8uq.Screenshot-2024-06-09-at-13-45-51.png' alt='....'/>
+                  {
+                    projects.map(project=>(
+                      <LinkRouter to={project.link} key={project.id} className='relative z-0'>
+                         <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
+                  <img className='w-full  h-[180px] md:h-[150px] lg:h-[200px] ' src={project.img} alt='....'/>
                   <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium'>CTL Africa </h4>
-                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'>Developed a responsive multiple-page website using HTML, CSS, Tailwind CSS, React-Router and React JS.
-                      </p>
+                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium'>{project.item}</h4>
+                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'>{project.text} </p>
                   </div>
                      <div className="flex justify-center pt-2">
-                     <p className='  w-[200px] md:w-[80%] lg: w-[200px] h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white '>See Me !</p>
+                     <p className='  w-[200px] md:w-[80%] lg: w-[200px] h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white '>See Me </p>
        
                      </div>
                 </div>
-                </LinkRouter>
-                  <LinkRouter to='https://elearning-web-coral.vercel.app/'>
-                  <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full   h-[180px] md:h-[150px] lg:h-[200px] ' src='https://i.im.ge/2024/06/09/KCpQxJ.Screenshot-2024-06-09-at-14-51-32.png' alt='....'/>
-                  <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium'> E-Learning  </h4>
-                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'>Developed a responsive and user-friendly e-learning website built with HTML, Bootstrap, CSS, and React JS.
-                     </p>
-                      
-                  </div>
-                  <div className="flex justify-center pt-2">
-                     <p className='  w-[200px] md:w-[80%] lg: w-[200px] h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium  hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'>See Me !</p>
-       
-                     </div>
-                </div>
-                  </LinkRouter>
-                  <LinkRouter to='https://responsive-landing-page-six.vercel.app/'>
-                  <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full   h-[180px] md:h-[150px] lg:h-[200px]' src='https://i.im.ge/2024/06/09/KCpO9K.Screenshot-2024-06-09-at-14-55-19.png' alt='....'/>
-                  <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium'>Landing Page </h4>
-                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'> Created a landing page built with HTML, Tailwind CSS, CSS, and React JS.
-                    
-                      </p>
-                      
-                  </div>
-                  <div className="flex justify-center pt-2">
-                     <p className=' w-[200px] md:w-[80%] lg: w-[200px]h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium  hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'>See Me !</p>
-       
-                     </div>
-                </div>
-                  </LinkRouter>
-                 <LinkRouter to='https://react-ui-gi6a-jr6c7mnqu-augustine-cudjoes-projects.vercel.app/'>
-                 <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full   h-[180px] md:h-[150px] lg:h-[200px] ' src='https://i.im.ge/2024/06/09/KCnAj4.Screenshot-2024-06-09-at-16-21-13.png' alt='....'/>
-                  <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium '> CRUD APP</h4>
-                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'> Implemented a React JS CRUD app for booking appointments. It allows users to book an appointment, edit, and delete using HTML, Bootstrap, React JS, JSON Server, and Axios.</p>
-                      
-                  </div>
-                  <div className="flex justify-center pt-2">
-                     <p className='  w-[200px] md:w-[80%] lg: w-[200px] h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'>See Me !</p>
-       
-                     </div>
-                </div>
-                 </LinkRouter>
-                 <LinkRouter to='https://hositadash-ffko-kf2crzlwr-augustine-cudjoes-projects.vercel.app/'>
-                 <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full   h-[180px] md:h-[150px] lg:h-[200px] ' src='https://i.im.ge/2024/06/09/KCJiI1.Screenshot-2024-06-09-at-15-47-58.png' alt='....'/>
-                  <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.2em] lg:text-[2rem] font-medium'> Dashboad </h4>
-                     <p className='text-white  text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'>Built a responsive dashboard for the school management system using HTML, CSS,Tailwind CSS, and ReactJS.
-                     
-                     </p>
-                      
-                  </div>
-                  <div className="flex justify-center pt-2">
-                     <p className='  w-[200px] md:w-[80%] lg: w-[200px] h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium  hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'>See Me !</p>
-       
-                     </div>
-                </div>
-                 </LinkRouter>
+                      </LinkRouter>
+                    ))
+                  }
                
-                 <LinkRouter to='https://mern-stack-blog-blue.vercel.app/'>
-                 <div className="project-content flex flex-col  w-full md:w-[350px] h-[450px] md:h-[410px] lg:h-[450px] rounded-md  border-radius-md shadow-lg shadow-[#0ef] flex   overflow-hidden ">
-                  <img className='w-full   h-[180px] md:h-[150px] lg:h-[200px] ' src='https://i.im.ge/2024/06/09/KC4c0F.Screenshot-2024-06-09-at-16-47-00.png' alt='....'/>
-                  <div className="projects-cont flex flex-col  items-center justify-center py-0 px-[1rem]   text-white ">
-                     <h4 className='text-white text-[2em] md:text-[1.5em] lg:text-[2rem]'> Blog </h4>
-                     <p className='text-white text-base md:text-sm lg:text-base   mb-[0.2rem] text-start'>
-                     Implemented a responsive blog page allowing users to post, create, update, and delete a post. Built with HTML, Tailwind CSS, JSON-server, Api, Axios, and ReactJS
-                      </p>
-                      
-                  </div>
-                  <div className="flex justify-center pt-2">
-                     <p className=' w-[200px] md:w-[80%] lg: w-[200px]  h-[50px] py-[17px] px-[28px] bg-[#0ef] rounded-lg shadow-lg shadow-[#0ef] text-[#1f242d] leading-[10px] text-[16px] font-medium  hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'>See Me !</p>
-       
-                     </div>
-                </div>
-                 </LinkRouter>
+               
+               
                 </div>
        </section>
       <section className=' contact px-[5%] py-[50px] md:min-w-full  min-w-screen z-0'  id='contact'>
@@ -461,7 +427,7 @@ function Home() {
            </form>
       </section>
      
-      <footer className="main-footer text-bg-dark py-5 small  border-t border-white">
+      <footer className="main-footer text-bg-dark py-5 small  border-t border-white px-[5%]">
  <div className="container">
      <div className="grid grid-cols-1 md:items-start md:grid-cols-4 md:gap-10 lg:gap-5 space-y-3">
         <div className="">
@@ -511,22 +477,22 @@ function Home() {
            </div>
         <div className="">
          
-        <p className='flex justify-between flex-col space-y-3  md:flex-wrap lg:flex-nowrap'>
-         <LinkRouter to="#" className="flex items-center px-2 justify-start md:justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-[120px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border ">
+        <p className='flex justify-between flex-col items-center space-y-3  md:flex-wrap lg:flex-nowrap'>
+         <LinkRouter to="#" className="flex items-center px-2  justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-10/12 transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border ">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook  flex shrink-0 " viewBox="0 0 16 16">
                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                </svg>
 
-            <span className="   ">facebook</span>
+            <span className="  ">facebook</span>
          </LinkRouter>
-         <LinkRouter to="#" className="flex items-center px-2 justify-start md:justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-[120px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border">
+         <LinkRouter to="#" className="flex items-center px-2  justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px]  md:ml-[0px] w-full md:w-10/12 items-center transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-twitter mx-1" viewBox="0 0 16 16">
                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
                </svg>
 
            <span className="d-md-block d-none">twitter</span>
          </LinkRouter>
-         <LinkRouter to="#" className="flex items-center px-2 justify-start md:justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-[120px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border">
+         <LinkRouter to="#" className="flex items-center px-2  justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px]  md:ml-[0px] w-full md:w-10/12 items-center transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-youtube me-md-2 " viewBox="0 0 16 16">
                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                </svg>
@@ -546,7 +512,7 @@ function Home() {
                 <Link to='home' className='  '> <FaArrowUp  className='bg-[#0ef] text-2xl text-white rounded-full animate-bounce'/> </Link>
              </div>
   </div>
-</footer>
+    </footer>
     
     </div>
   )

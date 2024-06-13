@@ -476,7 +476,8 @@ function Home() {
             </ul>
            </div>
         <div className="">
-         
+        <h6 className='font-bold text-lg text-white text-start'>Social Media</h6>
+           
         <p className='flex justify-between flex-col items-center space-y-3  md:flex-wrap lg:flex-nowrap'>
          <LinkRouter to="#" className="flex items-center px-2  justify-center gap-1 md:gap-2 my-1 lg:my-0 lg:mr-[15px] md:ml-[20px] md:ml-[0px] w-full md:w-10/12 transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white box-border ">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-facebook  flex shrink-0 " viewBox="0 0 16 16">

@@ -362,7 +362,7 @@ function Home() {
                         <TbApi  className='mx-auto  text-[#0ef] hover:text-white  ' size={100}/>
                     </div>
                     <div className='flex flex-col space-y-3'>
-                        <h4 className='text-white font-semibold text-2xl'>API</h4>
+                        <h4 className='text-white font-semibold text-2xl'>RESTful API</h4>
                       
                     </div>
                 </div>

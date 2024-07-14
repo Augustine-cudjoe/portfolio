@@ -272,7 +272,7 @@ function Home() {
     iconStyle={{ background: '#0ef', color: '#fff' }}
     icon={<FaAmazon/>}
   >
-    <h3 className="vertical-timeline-element-title text-xl font-extrabold md:text-3xl">Amazon, Poland</h3>
+    <h3 className="vertical-timeline-element-title text-xl font-extrabold md:text-3xl">Amazon,Poland</h3>
     <h4 className="vertical-timeline-element-subtitle my-3 text-lg md:text-2xl">Senior Compliance Associate</h4>
     <ul className='space-y-3'>
         <li className='text-base text-start flex md:items-center items-start gap-2'> <IoCheckmarkCircleOutline className=' w-[1em] h-[1em] text-sm  md:text-lg shrink-0 '/> Responded to product compliance issues .</li>

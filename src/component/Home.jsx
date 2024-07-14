@@ -22,7 +22,7 @@ function Home() {
     {
     id:0,
     item:'CTL Africa',
-    text:'Developed a responsive multiple-page website using HTML, CSS, Tailwind CSS, React-Router and React JS.',
+    text:'Developed a responsive website using HTML, CSS, Tailwind CSS, React-Router and React JS.',
     img:'https://i.im.ge/2024/06/09/KCH8uq.Screenshot-2024-06-09-at-13-45-51.png',
     link:'https://ctl-africa.vercel.app/'
   },
@@ -195,7 +195,7 @@ function Home() {
             <h3 className='text-[20px] lg:text-[32px] font-bold text-white mb-[20px] text-start' > And I'm a <span className='text-[#0ef] md:text-[20px] lg:text-[32px]' ref={el}> </span>  
              
            </h3>
-            <p className=' text-white text-[16px] text-start'>Focused on creating beautiful and user friendly web applications.</p>
+            <p className=' text-white text-[16px] text-start'>Focuse on creating beautiful and user friendly web applications.</p>
           <div className="social-media flex items-center md:justify-start justify-center relative md:static z-[150] md:z-0  ">
              <LinkRouter className='inline-flex items-center justify-center my-[30px] mr-[15px] ml-[0px] w-[40px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white' to='#'> <FaFacebookF /> </LinkRouter>
              <LinkRouter className='inline-flex items-center justify-center my-[30px] mr-[15px] ml-[0px] w-[40px] transition-all h-[40px] bg-transparent  border-2 border-[#0ef] rounded-full text-[#0ef] text-[20px] hover:bg-white hover:text-[#0ef] hover:shadow-white hover:border-white'    to='https://github.com/Augustine-cudjoe'> <IoLogoGithub  /></LinkRouter>
